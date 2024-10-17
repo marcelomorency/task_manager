@@ -1,0 +1,17 @@
+CREATE DATABASE mytask;
+
+USE mytask;
+
+CREATE TABLE tarefa (
+  tarefa_id INT AUTO_INCREMENT PRIMARY KEY,
+  titulo VARCHAR(255) NOT NULL,
+  descricao TEXT NOT NULL,
+  data_criacao DATETIME NOT NULL,
+  data_finalizacao DATETIME NULL
+);
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '12345678';
+FLUSH PRIVILEGES;
+
+
+select * from tarefa;
